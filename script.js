@@ -5,14 +5,15 @@ function letterCombinations(input_digit) {
   const ans = arr.map(num => alp[num])
   let i
   let j
+  const fans = []
   for(i=0;i<ans[0].length;i++)
   {
     for(j=0;j<ans[1].length;j++)
     {
-      console.log(ans[0][i] + ans[1][j])
+      fans.push((ans[0][i] + ans[1][j]))
     }
   }
-  
+  return fans
 }
 
 module.exports = letterCombinations;
